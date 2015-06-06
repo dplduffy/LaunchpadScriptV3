@@ -61,12 +61,12 @@ keysPage.onShift = function(isPressed)
 
 keysPage.onSceneButton = function(row, isPressed)
 { 
-   //if (row >= 4 )
-   //{
-   //   seqPage.setVelocity(row - 4);
-   //}
-   
-   if (noteMaps[row] != null)
+   if (row >= 4 )
+   {
+      seqPage.setVelocity(row - 4);
+   }
+ 
+   if (noteMaps[row] != null && row != 4)
    {
       if (IS_SHIFT_PRESSED && row == 3)
       {

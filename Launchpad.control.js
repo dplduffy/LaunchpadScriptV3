@@ -33,11 +33,7 @@ var userVarPans = 8;
 // Playing of pad on velocity change is turned off, setting this to true will turn it on
 var userVelNote = false;
 
-// New velocity setup, has a set number for low and high, and you use the two middle buttons to index the rest of the velocities.
-// velHigh is the High velocity and velLow is the Low velocity
-var velHigh = 127;
-var velLow = 70;
-
+// New velocity setup, has a set number for low and high, and you use the two middle buttons to index the rest of the velocities.velocity setup is in Launchpad_Step_Sequencer.js
 var velocities2 = [];
 for	(index = 127; index > -1; index--)
 {

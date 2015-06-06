@@ -533,9 +533,6 @@ linear14Grid.scrollRight = function()
 
 linear14Grid.scrollLeft = function()
 {
-   activeNoteMap = linear14Grid;
-   updateNoteTranlationTable();
-   host.showPopupNotification("Scale: Linear14");
 };
 
 linear34Grid.canScrollLeft = function()
@@ -576,14 +573,14 @@ linear25Grid.scrollLeft = function()
 {
    activeNoteMap = linear34Grid;
    updateNoteTranlationTable();
-   host.showPopupNotification("Scale: Linear25");
+   host.showPopupNotification("Scale: Linear34");
 };
 
 linear25Grid.scrollRight = function()
 {
    activeNoteMap = noteMap23_12;
    updateNoteTranlationTable();
-   host.showPopupNotification("Scale: NoteMap23_12");
+   host.showPopupNotification("Scale: Notemap23_12");
 };
 
 noteMap23_12.canScrollLeft = function()
@@ -598,16 +595,16 @@ noteMap23_12.canScrollRight = function()
 
 noteMap23_12.scrollLeft = function()
 {
-   activeNoteMap = linear34Grid;
+   activeNoteMap = linear25Grid;
    updateNoteTranlationTable();
-   host.showPopupNotification("Scale: Linear34");
+   host.showPopupNotification("Scale: Linear25");
 };
 
 noteMap23_12.scrollRight = function()
 {
    activeNoteMap = noteMap13_12;
    updateNoteTranlationTable();
-   host.showPopupNotification("Scale: NoteMap13_12");
+   host.showPopupNotification("Scale: Notemap13_12");
 };
 
 noteMap13_12.canScrollLeft = function()
@@ -622,7 +619,7 @@ noteMap13_12.canScrollRight = function()
 
 noteMap13_12.scrollLeft = function()
 {
-   activeNoteMap = linear34Grid;
+   activeNoteMap = noteMap23_12;
    updateNoteTranlationTable();
    host.showPopupNotification("Scale: Notemap23_12");
 };

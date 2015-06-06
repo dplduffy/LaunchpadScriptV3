@@ -9,8 +9,11 @@ seqPage = new Page();
 var SEQ_BUFFER_STEPS = 256;
 var curVel = 127;   //velocity always starts at 127
 var velInc = 3;     //ammount the velocity is incremented by the up (F) and down (G) buttons
+var velHigh = 127; //high velocity
+var velLow = 70;    //low velocity
 var velHighMath = (velHigh - 127);  //transposing the velocity sttings to the array
 var velLowMath = (127 - velLow);
+
 
 var STEP_SIZE =
 {
@@ -97,7 +100,7 @@ seqPage.onSceneButton = function(row, isPressed)
       {
         activeNoteMap.mixerButton(row);
       }
-       else if (row >= 4)
+       else if (row >= 4 && !ON_KEYS_PAGE)
       {
          this.setVelocity(row - 4);
       }
