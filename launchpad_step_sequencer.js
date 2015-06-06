@@ -100,8 +100,9 @@ seqPage.onSceneButton = function(row, isPressed)
       {
         activeNoteMap.mixerButton(row);
       }
-       else if (row >= 4 && !ON_KEYS_PAGE)
+       else if (row >= 4)
       {
+         println("seqvel")
          this.setVelocity(row - 4);
       }
       else

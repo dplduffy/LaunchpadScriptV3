@@ -60,9 +60,11 @@ keysPage.onShift = function(isPressed)
 }
 
 keysPage.onSceneButton = function(row, isPressed)
-{ 
+{
+   println("Scene Pressed")
    if (row >= 4 )
    {
+      println("keyvel")
       seqPage.setVelocity(row - 4);
    }
  

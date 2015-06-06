@@ -312,19 +312,40 @@ largeDrumNoteMap.keyIsBlack = function(key)
 
 largeDrumNoteMap.scrollUp = function()
 {
-   this.rootKey = Math.min(this.rootKey + 1, 108);
-   updateNoteTranlationTable();
+   println(IS_SHIFT_PRESSED)
+   
+   if (IS_SHIFT_PRESSED)
+   {
+      this.rootKey = Math.min(this.rootKey + 16, 112);
+      updateNoteTranlationTable();
+   }
+   
+   if (!IS_SHIFT_PRESSED)
+   {
+      this.rootKey = Math.min(this.rootKey + 1, 112);
+      updateNoteTranlationTable();   
+   }
+   
 };
 
 largeDrumNoteMap.scrollDown = function()
 {
-   this.rootKey = Math.max(this.rootKey - 1, 0);
-   updateNoteTranlationTable();
+   if (IS_SHIFT_PRESSED)
+   {
+      this.rootKey = Math.max(this.rootKey - 16, 0);
+      updateNoteTranlationTable();
+   }
+   if (!IS_SHIFT_PRESSED)
+   {
+      this.rootKey = Math.max(this.rootKey - 1, 0);
+      updateNoteTranlationTable();   
+   }
+   
 };
 
 largeDrumNoteMap.canScrollUp = function()
 {
-   return this.rootKey < 108;
+   return this.rootKey < 112;
 };
 
 largeDrumNoteMap.canScrollDown = function()
@@ -383,14 +404,29 @@ smallDrumNoteMap.keyIsBlack = function(key)
 
 smallDrumNoteMap.scrollUp = function()
 {
-   this.rootKey = Math.min(this.rootKey + 1, 60);
+   if (IS_SHIFT_PRESSED) {
+      this.rootKey = Math.min(this.rootKey + 16, 64);
+      updateNoteTranlationTable();
+   }
+   if (!IS_SHIFT_PRESSED) {
+   this.rootKey = Math.min(this.rootKey + 1, 64);
    updateNoteTranlationTable();
+   }
 };
 
 smallDrumNoteMap.scrollDown = function()
 {
-   this.rootKey = Math.max(this.rootKey - 1, 4);
-   updateNoteTranlationTable();
+   if (IS_SHIFT_PRESSED)
+   {
+      this.rootKey = Math.max(this.rootKey - 16, 0);
+      updateNoteTranlationTable();
+   }
+   if (!IS_SHIFT_PRESSED)
+   {
+      this.rootKey = Math.max(this.rootKey - 1, 0);
+      updateNoteTranlationTable();   
+   }
+   
 };
 
 smallDrumNoteMap.canScrollUp = function()
