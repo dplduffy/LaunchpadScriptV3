@@ -334,7 +334,7 @@ gridPage.onGridButton = function(row, column, pressed)
         REFROW++;
    }
 
-   if (IS_SHIFT_PRESSED)
+   if (IS_SHIFT_PRESSED && TEMPMODE === TempMode.OFF)
    {
       trackBank.launchScene(this.mixerAlignedGrid ? row : column);
    }
